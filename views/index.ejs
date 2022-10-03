@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>Devil Ray Guestbook</h1>
+    <form action="/add" method="post">
+        <div>
+            <label for="">Vorname</label>
+            <input type="text" name="firstname" id="" placeholder="Vorname">
+        </div>
+        <div>
+            <label for="">Nachname</label>
+            <input type="text" name="lastname" id="" placeholder="Nachname">
+        </div>
+        <div>
+            <label for="">E-Mailadresse</label>
+            <input type="email" name="email" id="" placeholder="example@mail.com">
+        </div>
+        <div>
+            <label for="">Dein Kommentar</label>
+            <input type="text" name="comment" id="" placeholder="Schreibe hier deinen Kommentar …">
+        </div>
+        <button type="submit">Abschicken</button>
+    </form>
+    <% if(error) { %>
+        <p class="error">Upsi, da hat etwas nicht gepasst</p>
+        <%}%>
+            <%- include('./partials/entries.ejs') %>
+</body>
+
+</html>
